@@ -3,8 +3,15 @@ import styles from '../styles/Home.module.css';
 
 import HubspotForm from 'react-hubspot-form';
 import Dailymotion from 'react-dailymotion';
+import TagManager from 'react-gtm-module';
 
 export default function Home() {
+
+  const tagManagerArgs = {
+    gtmId: 'GTM-000000'
+  }
+
+  TagManager.initialize(tagManagerArgs)
   return (
     <div className={styles.container}>
       <Head>
